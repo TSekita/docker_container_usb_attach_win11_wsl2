@@ -88,6 +88,7 @@ docker exec -it [CONTAINER ID or NAMES] bash
 ```bash
 apt install socat
 ```
+</details>
 
 4-4. Docker containerに"socat"でWSLから中継されている/dev/ttyUSB*を受信
 
