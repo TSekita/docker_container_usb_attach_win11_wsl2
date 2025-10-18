@@ -24,6 +24,8 @@
 
 1. WSLにusbシリアルを認識させる
 
+参考URL:https://learn.microsoft.com/ja-jp/windows/wsl/connect-usb
+
 	1-1. WSLをupdateし再起動
 
 	```terminal
