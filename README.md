@@ -48,11 +48,20 @@
 	```
 
 2. WSL内で/dev/ttyUSB*を確認する
-```terminal
+```bash
 ls /dev/ttyUSB*
 ```
 
 3. WSL内でsocatを使って/dev/ttyUSB*を中継する
 
+	3-1. WSLに"socat"をインストール
+	```bash
+	sudo apt install socat
+	```
+	3-2. socatを使って中継を実行
+	```bash
+	sudo socat -d -d TCP4-LISTEN:2001,reuseaddr,fork FILE:/dev/ttyUSB0,raw,echo=0,b115200
+	```
 4. Docker container内でsocatを使って/dev/ttyUSB*を受信する
+
 
