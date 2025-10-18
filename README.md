@@ -76,7 +76,7 @@ sudo socat -d -d TCP4-LISTEN:2001,reuseaddr,fork FILE:/dev/ttyUSB0,raw,echo=0,b1
 
 4-2. Docker container起動
 
-```terminal
+```terminal:terminal
 docker ps -a
 docker start [CONTAINER ID or NAMES]
 docker exec -it [CONTAINER ID or NAMES] bash
