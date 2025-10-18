@@ -84,7 +84,7 @@ docker exec -it [CONTAINER ID or NAMES] bash
 
 4-3. Docker containerに"socat"をインストール
 
-```bash
+```php:bash
 apt install socat
 ```
 
