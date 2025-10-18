@@ -14,8 +14,8 @@
 
 1. WSLにusbシリアルを認識させる
 
-2. WSL内で/dev/USB*を確認する
+2. WSL内で/dev/ttyUSB*を確認する
 
-3. WSL内でsocatを使ってUSB*を中継する
+3. WSL内でsocatを使って/dev/ttyUSB*を中継する
 
-4. Docker container内でsocatを使ってUSB*を受信する
+4. Docker container内でsocatを使って/dev/ttyUSB*を受信する
