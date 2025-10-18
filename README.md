@@ -41,13 +41,16 @@
 	usbipd bind --busid [BUSID]
 	# "Shared"確認
 	usbipd list
-	# "Attached"へ
+	# "Attached"へ(WSLへ認識させる）
 	usbipd attach --wsl --busid [BUSID]
 	# "Attached"確認
 	usbipd list
 	```
 
 2. WSL内で/dev/ttyUSB*を確認する
+```terminal
+ls /dev/ttyUSB*
+```
 
 3. WSL内でsocatを使って/dev/ttyUSB*を中継する
 
