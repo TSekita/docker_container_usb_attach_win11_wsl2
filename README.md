@@ -64,4 +64,26 @@ ls /dev/ttyUSB*
 	```
 4. Docker container内でsocatを使って/dev/ttyUSB*を受信する
 
+	4-1. Docker Desktopアプリを起動
 
+	4-2. Docker container起動
+	```terminal
+	docker ps -a
+	docker start [CONTAINER ID or NAMES]
+	docker exec -it [CONTAINER ID or NAMES] bash
+	```
+	4-3. Docker containerに"socat"をインストール
+	```bash
+	apt install socat
+	```
+	4-4. Docker containerに"socat"でWSLから中継されている/dev/ttyUSB*を受信
+	```bash
+	socat -d -d PTY,link=/dev/ttyUSB0,raw,echo=0 TCP:host.docker.internal:2001
+	```
+	4-5. Docker contairを他のタブで開き確認
+	```terminal
+	docker exec -it [CONTAINER ID or NAMES] bash
+	```
+	```bash
+	ls /dev/ttyUSB*
+	```
